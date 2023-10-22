@@ -12,7 +12,7 @@ export function fetchTagData() {
     return (dispatch) => {
         fetch(`${base_api_url}settings/gettags/0`)
             .then((response) => response.json())
-            .then((data) => dispatch({ type: FETCH_TAG_DATA, payload: data?.data[0] }));
+            .then((data) => dispatch({ type: FETCH_TAG_DATA, payload: data.data[0] }));
     };
 }
 
